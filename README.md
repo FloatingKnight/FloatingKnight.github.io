@@ -1,26 +1,35 @@
 <<html>
-<head>
+  <head>
     <title>Floating Knights Discover</title>
     <style>
-        /* styles for the website */
+      /* styles for the website */
     </style>
     <script src="https://www.youtube.com/iframe_api?key=AIzaSyDwmpC78HpdErthgATbwCbB971joJKV3po"></script>
+    <script>
+      // initialize the player
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+          videoId: 'jfKfPfyJRdk',
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+      
+      function onPlayerReady(event) {
+        event.target.mute();
+        event.target.pauseVideo();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- website content here -->
 
-        // initialize the player
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('youtube-player', {
-                videoId: 'jfKfPfyJRdk',
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            event.target.mute();
-            event.target.pauseVideo();
-        }
+    <!-- add an element with the id "youtube-player" where the player will be inserted -->
+    <div id="youtube-player"></div>
+  </body>
+</html>
     </script>
     <style>
       body {
