@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <title>Floating Knights Discover</title>
@@ -55,7 +54,7 @@
     </div>
     <div id="nav">
       <a href="#about">About</a>
-      <a href="#projects">Snake</a>
+      <a href="#projects">Projects</a>
     </div>
     <div id="main">
       <div id="about">
@@ -63,7 +62,13 @@
         <p>Nothing Interesting I'm just learning to code and thought i'd make a website</p>
       </div>
       <div id="projects">
-        <h2>Projects</h2>
+    <h2>Projects</h2>
+    <p>
+        <li> <a href="snake.html" target="_blank"> Snake game</a></li>
+        <li> Some weebshit</li>
+        <li> ect.</li>
+    </p>
+</div>
         <p>
         <li>Including a snake game</li>
         <li>Some weebshit</li>
