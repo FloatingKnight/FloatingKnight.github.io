@@ -45,16 +45,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-<div id="sidebar" class="sidebar-element">
-  ...
-</div>
     </style>
 
    </head>
   <body>
     <div id="header">
-      <h1>Floating Knight</h1>
+      <h1>Floating Knights Discover</h1>
     </div>
 <div id="spotify-player">
    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1CRxWqV31HUtj3n5Emummb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -63,8 +59,7 @@
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="https://forestherd.itch.io/waterbed">
-    
+      <a href="#waterbed">Waterbed</a>
     </div>
     <div id="main">
       <div id="about">
@@ -79,10 +74,10 @@
     </p>
 </div>
         <p>
-       
-        <li>Platformer</li>
-        <li>Raineffect</li>
-        <li>Anime Stuff</li>
+        <li>Platformer on website with enemies</li>
+        <li>Anime Interests</li>
+        <li>Chess Interests</li>
+        <li>Better sidebar and Header</li>
         </p>
       </div>
   </body>
