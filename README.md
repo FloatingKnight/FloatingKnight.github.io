@@ -28,23 +28,31 @@
       }
 
       #main {
-        float: left;
-        width: 80%;
-        padding: 20px;
+        /* Your main styles here */
       }
+    </style>
+  </head>
+  <body>
+    <div id="sky-top"></div>
+    <div id="sky-bottom"></div>
+    <canvas id="canvas"></canvas>
+    <script>
+      const height = document.body.offsetHeight;
+      const width = document.body.offsetWidth;
+      const cvs = document.getElementById('canvas');
+      cvs.setAttribute("height", height);
+      cvs.setAttribute("width", width);
+    </script>
 
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        display: block;
-        margin-bottom: 10px;
-      }
-      body {
-  background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    <div id="header">
+      <h1>Floating Knights Discover</h1>
+    </div>
+
+    <div id="nav"></div>
+
+    <div id="main"></div>
+  </body>
+</html>
     </style>
 
    </head>
