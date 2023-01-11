@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
   <head>
     <title>Floating Knights Discover</title>
@@ -46,11 +46,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  #nav {
+ #nav {
+    width:200px; /* adjust accordingly */
+    height:200px; /* adjust accordingly */
     background-image: url("https://i.pinimg.com/originals/b9/32/55/b932552782dca5efda46221f47599bda.gif");
     background-repeat: no-repeat;
     background-size: cover;
-}
+    background-position: center;
 }
     </style>
 
