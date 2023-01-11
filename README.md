@@ -53,7 +53,7 @@
       <h1>Floating Knights Discover</h1>
     </div>
 <div id="spotify-player">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5ri4Wnbva5arEBnxjQrDU3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1CRxWqV31HUtj3n5Emummb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
     <div id="nav">
@@ -63,14 +63,13 @@
     <div id="main">
       <div id="about">
         <h2>About</h2>
-        <p>Nothing Interesting I'm just learning to code and thought i'd make a website</p>
+        <p>Nothing Interesting I'm just learning to code</p>
       </div>
       <div id="projects">
     <h2>Projects</h2>
     <p>
        <a href="snake.html" target="_blank"> Snake game</a>
-        <li> Some weebshit</li>
-        <li> ect.</li>
+
     </p>
 </div>
         <p>
@@ -79,6 +78,5 @@
         <li>ect.</li>
         </p>
       </div>
-    </div>
   </body>
 </html>
