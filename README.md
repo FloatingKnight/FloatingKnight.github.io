@@ -59,6 +59,7 @@
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
+      <a href="path/to/gamepage.html">Waterbed</a>
     </div>
     <div id="main">
       <div id="about">
