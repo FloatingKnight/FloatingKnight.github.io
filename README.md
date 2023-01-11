@@ -7,13 +7,13 @@
         background-color: black;
         color: white;
         font-family: Arial, sans-serif;
-        background-image: url('https://paste.pics/b5e17f8113c66cd8104214fd2c1acb89');
+        background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
         background-repeat: no-repeat;
         background-size: cover;
       }
 
       #header {
-        background-image: url("https://i.pinimg.com/originals/70/bf/ad/70bfada1a2c02f0ef0ee33e04b08f4a2.jpg");
+        background-image: url("https://paste.pics/b5e17f8113c66cd8104214fd2c1acb89");
         background-repeat: no-repeat;
         background-size: contain;
         height: 300px; /* adjust accordingly */
