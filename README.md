@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
   <head>
     <title>Floating Knights Discover</title>
@@ -7,27 +7,24 @@
         background-color: black;
         color: white;
         font-family: Arial, sans-serif;
-        background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
-        background-repeat: no-repeat;
-        background-size: cover;
       }
 
       #header {
-        background-image: url("https://paste.pics/b5e17f8113c66cd8104214fd2c1acb89");
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 300px; /* adjust accordingly */
-        width: 100%; /* make the header take the full width */
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
       }
+
+ #header h1 {
+    color: white;  /* Change this to white */
+    margin: 0;
+}
 
       #nav {
         float: left;
         width: 20%;
-        height: 200px; /* adjust accordingly */
-        background-image: url("https://i.pinimg.com/originals/b9/32/55/b932552782dca5efda46221f47599bda.gif");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        height: 100%;
+        background-color: #555;
         padding: 20px;
       }
 
@@ -44,10 +41,18 @@
         display: block;
         margin-bottom: 10px;
       }
+      body {
+  background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
     </style>
+
   </head>
   <body>
-    <div id="header"></div>
+    <div id="header">
+      <h1>Floating Knights Discover</h1>
+    </div>
     <div id="nav">
       <a href="#about">About</a>
       <a href="#snake">Snake</a>
