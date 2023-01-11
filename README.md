@@ -2,36 +2,6 @@
   <head>
     <title>Floating Knights Discover</title>
     <style>
-      /* styles for the website */
-    </style>
-    <script src="https://www.youtube.com/iframe_api?key=AIzaSyDwmpC78HpdErthgATbwCbB971joJKV3po"></script>
-    <script>
-      // initialize the player
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('youtube-player', {
-          videoId: 'jfKfPfyJRdk',
-          events: {
-            'onReady': onPlayerReady
-          }
-        });
-      }
-      
-      function onPlayerReady(event) {
-        event.target.mute();
-        event.target.pauseVideo();
-      }
-    </script>
-  </head>
-  <body>
-    <!-- website content here -->
-
-    <!-- add an element with the id "youtube-player" where the player will be inserted -->
-    <div id="youtube-player"></div>
-  </body>
-</html>
-    </script>
-    <style>
       body {
         background-color: black;
         color: white;
@@ -77,13 +47,13 @@
 }
     </style>
 
-  </head>
+   </head>
   <body>
     <div id="header">
       <h1>Floating Knights Discover</h1>
     </div>
-<div id="youtube-player">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="spotify-player">
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZeKCadgRdKQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 </div>
 
     <div id="nav">
