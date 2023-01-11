@@ -52,6 +52,10 @@
     <div id="header">
       <h1>Floating Knights Discover</h1>
     </div>
+<div id="youtube-player">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -64,7 +68,7 @@
       <div id="projects">
     <h2>Projects</h2>
     <p>
-        <li> <a href="snake.html" target="_blank"> Snake game</a></li>
+       <a href="snake.html" target="_blank"> Snake game</a>
         <li> Some weebshit</li>
         <li> ect.</li>
     </p>
