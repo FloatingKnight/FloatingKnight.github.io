@@ -7,24 +7,27 @@
         background-color: black;
         color: white;
         font-family: Arial, sans-serif;
+        background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       #header {
-        background-color: #333;
-        padding: 20px;
-        text-align: center;
+        background-image: url("https://i.pinimg.com/originals/70/bf/ad/70bfada1a2c02f0ef0ee33e04b08f4a2.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 300px; /* adjust accordingly */
+        width: 100%; /* make the header take the full width */
       }
-
- #header h1 {
-    color: white;  /* Change this to white */
-    margin: 0;
-}
 
       #nav {
         float: left;
         width: 20%;
-        height: 100%;
-        background-color: #555;
+        height: 200px; /* adjust accordingly */
+        background-image: url("https://i.pinimg.com/originals/b9/32/55/b932552782dca5efda46221f47599bda.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         padding: 20px;
       }
 
@@ -41,26 +44,10 @@
         display: block;
         margin-bottom: 10px;
       }
-      body {
-  background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-
- #nav {
-    width:200px; /* adjust accordingly */
-    height:200px; /* adjust accordingly */
-    background-image: url("https://i.pinimg.com/originals/b9/32/55/b932552782dca5efda46221f47599bda.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
     </style>
-
   </head>
   <body>
-    <div id="header">
-      <h1>Floating Knights Discover</h1>
-    </div>
+    <div id="header"></div>
     <div id="nav">
       <a href="#about">About</a>
       <a href="#snake">Snake</a>
