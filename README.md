@@ -59,7 +59,7 @@
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="path/to/waterbed.html">Waterbed</a>
+      <a href="https://forestherd.itch.io/waterbed"></a>
     </div>
     <div id="main">
       <div id="about">
