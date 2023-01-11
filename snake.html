@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* CSS styles for the game */
+      #game {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .snake {
+        width: 10px;
+        height: 10px;
+        background-color: green;
+        position: absolute;
+      }
+      .food {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game">
+      <div class="snake"></div>
+      <div class="food"></div>
+    </div>
+
+    <script>
+      // JavaScript code for the game
+      // Variables for game
+      const game = document.getElementById("game");
+      const snake = document.getElementsByClassName("snake")[0];
+      const food = document.getElementsByClassName("food")[0];
+      let snakeX = 0;
+      let snakeY = 0;
+      let snakeLength = 1;
+      let gameSpeed = 100; // milliseconds
+
+      // Generate food
+      function generateFood() {
+        foodX = Math.floor(Math.random() * (game.offsetWidth - snake.offsetWidth));
+        foodY = Math.floor(Math.random() * (game.offsetHeight - snake.offsetHeight));
+        food.style.left = foodX + "px";
+        food.style.top = foodY + "px";
+      }
+
+      // Move snake
+      function moveSnake() {
+        snake.style.left = snakeX + "px";
+        snake.style.top = snakeY + "px";
+      }
+
+      // Check for collision with food
+      function checkCollision() {
+        if (snakeX == foodX && snakeY == foodY) {
+          generateFood();
+          increaseLength();
+        }
+      }
+
+      // Increase snake length
+      function increaseLength() {
+        var newCell = document.createElement("div");
+        newCell.classList.add("snake-cell");
+        snake.appendChild(newCell);
+        snakeLength++;
+      }
+
+      // Main game loop
+      function gameLoop() {
+        setTimeout(gameLoop, gameSpeed);
+        moveSnake();
+        checkCollision();
+      }
+
+      // Initialize game
+      generateFood();
+      gameLoop();
+
+document.onkeydown = function(e) {
+switch (e.keyCode) {
+case 37: // left arrow
+snakeX -= snake.offsetWidth;
+break;
+case 38: // up arrow
+snakeY -= snake.offsetHeight;
+break;
+case 39: // right arrow
+snakeX += snake.offsetWidth;
+break;
+case 40: // down arrow
+snakeY += snake.offsetHeight;
+break;
+}
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+// set up the snake game
+var game = document.getElementById("game");
+var snake = document.getElementsByClassName("snake")[0];
+var food = document.getElementsByClassName("food")[0];
+var snakeX = 0;
+var snakeY = 0;
+var snakeLength = 1;
+var gameSpeed = 100; // milliseconds
+
+});
+
