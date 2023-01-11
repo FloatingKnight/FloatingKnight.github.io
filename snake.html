@@ -31,6 +31,22 @@
 
     <script>
       // JavaScript code for the game
+
+      <button id="start-button">Start Game</button>
+
+        // Select the start button
+  const startButton = document.getElementById("start-button");
+
+  startButton.disabled = true;
+  
+  clearTimeout(gameLoop);
+
+
+// Add a click event listener to the start button
+startButton.addEventListener("click", function() {
+  // Start the game
+  gameLoop();
+});
       // Variables for game
       const game = document.getElementById("game");
       const snake = document.getElementsByClassName("snake")[0];
