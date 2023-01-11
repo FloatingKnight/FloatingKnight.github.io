@@ -14,10 +14,10 @@
         text-align: center;
       }
 
-      #header h1 {
-        color: white;  /* Change this to white */
-        margin: 0;
-      }
+ #header h1 {
+    color: white;  /* Change this to white */
+    margin: 0;
+}
 
       #nav {
         float: left;
@@ -28,37 +28,33 @@
       }
 
       #main {
-        /* Your main styles here */
+        float: left;
+        width: 80%;
+        padding: 20px;
       }
-    </style>
-  </head>
-  <body>
-    <div id="sky-top"></div>
-    <div id="sky-bottom"></div>
-    <canvas id="canvas"></canvas>
-    <script>
-      const height = document.body.offsetHeight;
-      const width = document.body.offsetWidth;
-      const cvs = document.getElementById('canvas');
-      cvs.setAttribute("height", height);
-      cvs.setAttribute("width", width);
-    </script>
 
-    <div id="header">
-      <h1>Floating Knights Discover</h1>
-    </div>
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+      }
+      body {
+  background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    <div id="nav"></div>
-
-    <div id="main"></div>
-  </body>
-</html>
+<div id="sidebar" class="sidebar-element">
+  ...
+</div>
     </style>
 
    </head>
   <body>
     <div id="header">
-      <h1>Floating Knights Discover</h1>
+      <h1>Floating Knight</h1>
     </div>
 <div id="spotify-player">
    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1CRxWqV31HUtj3n5Emummb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -67,7 +63,8 @@
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="https://forestherd.itch.io/waterbed">Click Here to visit the waterbed game</a>
+      <a href="https://forestherd.itch.io/waterbed">
+    
     </div>
     <div id="main">
       <div id="about">
@@ -82,9 +79,10 @@
     </p>
 </div>
         <p>
-        <li>Including a snake game</li>
-        <li>Some weebshit</li>
-        <li>ect.</li>
+       
+        <li>Platformer</li>
+        <li>Raineffect</li>
+        <li>Anime Stuff</li>
         </p>
       </div>
   </body>
