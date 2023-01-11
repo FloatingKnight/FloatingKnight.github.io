@@ -14,10 +14,10 @@
         text-align: center;
       }
 
- #header h1 {
-    color: white;  /* Change this to white */
-    margin: 0;
-}
+      #header h1 {
+        color: white;  /* Change this to white */
+        margin: 0;
+      }
 
       #nav {
         float: left;
@@ -59,7 +59,7 @@
     <div id="nav">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="https://forestherd.itch.io/waterbed"></a>
+      <a href="https://forestherd.itch.io/waterbed">Click Here to visit the waterbed game</a>
     </div>
     <div id="main">
       <div id="about">
