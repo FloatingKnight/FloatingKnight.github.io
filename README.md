@@ -64,9 +64,11 @@
       </div>
       <div id="projects">
         <h2>Projects</h2>
-        <p>Including a snake game in my website
-        Some weebshit
-        ect.</p>
+        <p>
+        <li>Including a snake game</li>
+        <li>Some weebshit</li>
+        <li>ect.</li>
+        </p>
       </div>
     </div>
   </body>
