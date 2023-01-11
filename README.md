@@ -7,7 +7,7 @@
         background-color: black;
         color: white;
         font-family: Arial, sans-serif;
-        background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
+        background-image: url('https://paste.pics/b5e17f8113c66cd8104214fd2c1acb89');
         background-repeat: no-repeat;
         background-size: cover;
       }
