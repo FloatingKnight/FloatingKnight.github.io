@@ -1,0 +1,33 @@
+/* This is a CSS file for styles :) haha */
+
+/* Add styles for the sidebar element */
+.sidebar-element {
+    /* Some styles for the sidebar element */
+    background-color: #555;
+    padding: 20px;
+    width: 20%;
+    height: 100%;
+}
+
+/* Add styles for the sidebar link */
+.sidebar-link {
+    /* Some styles for the sidebar link */
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Add styles for the main content area */
+#main-content {
+    /* Some styles for the main content area */
+    padding: 20px;
+    width: 80%;
+    height: 100%;
+}
+
+/* Add styles for the canvas */
+canvas {
+    /* Some styles for the canvas */
+    z-index: 2;
+    position: absolute;
+}
