@@ -1,4 +1,4 @@
-<<html>
+<html>
   <head>
     <title>Floating Knights Discover</title>
     <style>
