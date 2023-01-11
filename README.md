@@ -4,8 +4,8 @@
     <style>
         /* styles for the website */
     </style>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
+    <script src="https://www.youtube.com/iframe_api?key=AIzaSyDwmpC78HpdErthgATbwCbB971joJKV3po"></script>
+
         // initialize the player
         var player;
         function onYouTubeIframeAPIReady() {
