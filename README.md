@@ -15,11 +15,11 @@
       }
 
  #header h1 {
-    color: white;  /* Change this to white */
+    color: Pink;  /* Change this to white */
     margin: 0;
 }
 
-#sidebar {
+#nav {
   border-radius: 10px; /* This will make the corners of the sidebar element rounded */
 }
 
@@ -32,7 +32,7 @@
         float: left;
         width: 20%;
         height: 100%;
-        background-color: #555;
+        background-color: #666;
         padding: 20px;
       }
 
