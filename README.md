@@ -19,6 +19,15 @@
     margin: 0;
 }
 
+#sidebar {
+  border-radius: 10px; /* This will make the corners of the sidebar element rounded */
+}
+
+#header {
+  border-radius: 10px; /* This will make the corners of the header element rounded */
+}
+
+
       #nav {
         float: left;
         width: 20%;
