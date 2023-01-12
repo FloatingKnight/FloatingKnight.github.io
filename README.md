@@ -14,6 +14,14 @@
         text-align: center;
       }
 
+      #header {
+  opacity: 0.8; /* This will make the header 80% opaque */
+}
+
+#nav {
+  opacity: 0.7; /* This will make the sidebar 70% opaque */
+}
+
  #header h1 {
     color: Pink;  /* Change this to white */
     margin: 0;
