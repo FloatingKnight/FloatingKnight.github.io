@@ -76,11 +76,11 @@
 </div>
 
     <div id="nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#waterbed" onclick="window.open('https://forestherd.itch.io/waterbed', '_blank')">Waterbed</a>
-      <a href="#Canvas.html">Canvas</a>
-    </div>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#waterbed" onclick="window.open('https://forestherd.itch.io/waterbed', '_blank')">Waterbed</a>
+  <a href="canvas.html">Canvas</a>
+</div>
     <div id="main">
       <div id="about">
         <h2>About</h2>
