@@ -14,6 +14,8 @@
         text-align: center;
       }
 
+      
+
       #header {
   opacity: 0.8; /* This will make the header 80% opaque */
 }
@@ -77,6 +79,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#waterbed">Waterbed</a>
+      <a href="#Canvas.html">Canvas</a>
     </div>
     <div id="main">
       <div id="about">
@@ -94,7 +97,8 @@
         <li>Platformer on website with enemies</li>
         <li>Anime Interests</li>
         <li>Chess Interests</li>
-        <li>Better sidebar and Header</li>
+        <li>Pixel Canvas</li>
+        
         </p>
       </div>
   </body>
