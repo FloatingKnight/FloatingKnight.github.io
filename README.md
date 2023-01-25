@@ -102,5 +102,7 @@
         
         </p>
       </div>
+      <div id="game"></div>
+    <script src="path/to/game.js"></script>
   </body>
 </html>
