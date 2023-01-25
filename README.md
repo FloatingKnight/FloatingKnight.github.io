@@ -60,9 +60,6 @@
         margin-bottom: 10px;
       }
       body {
-  background-image: url('https://i.redd.it/rrmfmbbup6j01.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
     </style>
 <script src="path/to/game.js"></script>
