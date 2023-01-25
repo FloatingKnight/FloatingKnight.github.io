@@ -65,6 +65,7 @@
   background-size: cover;
 }
     </style>
+<script src="path/to/game.js"></script>
 
    </head>
   <body>
