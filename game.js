@@ -7,7 +7,7 @@ var mainState = {
     },
     create: function() {
         // Initialize game objects and settings here
-        this.rectangle = game.add.rectangle(50, 50, 20, 20, 0xFF00FF);
+        this.rectangle = game.add.rectangle(0, game.height - 20, 20, 20, 0xFF00FF);
         this.bullets = game.add.group();
         this.bullets.enableBody = true;
         this.bullets.physicsBodyType = Phaser.Physics.ARCADE;
