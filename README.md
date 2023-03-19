@@ -77,7 +77,8 @@
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
   <a href="#waterbed" onclick="window.open('https://forestherd.itch.io/waterbed', '_blank')">Waterbed</a>
-  <a href="canvas.html">Canvas</a>
+  <a href="FlashCard.html">FlashCard</a>
+  <a href="Study.html">Study</a>
 </div>
     <div id="main">
       <div id="about">

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Study Time!</title>
+    <style>
+
+       body {
+  background-color: rgb(0, 0, 0);
+}
+
+#background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+#timer {
+  color: white;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid gray;
+}
+
+#timer.blue {
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+h1 {
+  color: white;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  box-shadow: 0 0 0 2px #333;
+}
+
+button {
+  margin-top: 10px;
+  margin-left: 6px;
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.audio-display {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px #333;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sticky-note {
+  width: 200px;
+  height: 150px;
+  resize: both;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+#noteIcon:focus-within + #stickyNote,
+#stickyNote:focus {
+  outline: none;
+}
+
+#stickyNote.active {
+  display: block;
+}
+
+#stickyNote.visible {
+  display: block;
+}
+#noteIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#stickyNoteResizeHandle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  cursor: nwse-resize;
+  z-index: 2; /* add this line */
+}
+
+#stickyNote.active #stickyNoteResizeHandle {
+  display: block;
+}
+
+#stickyNote.active:focus-within #stickyNoteResizeHandle {
+  display: block;
+}
+
+.sticky-note {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: lightgray;
+  border: 1px solid #333;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  cursor: move;
+  padding: 10px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  overflow-y: auto;
+  resize: both;
+  z-index: 1;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: calc(100vw - 160px);
+  max-height: calc(100vh - 160px);
+}
+
+.sticky-note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 0px;
+  cursor: move;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sticky-note-close {
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 0 5px;
+}
+    
+
+.sticky-note:focus-within {
+  border: 2px solid white;
+}
+
+.sticky-note * {
+  cursor: move;
+}
+
+
+#stickyNote * {
+  cursor: move;
+}
+
+#noteIcon::before {
+  content: "🦕"; /* change the icon to the dinosaur emoji from Facebook */
+}
+
+        #noteIcon:hover {
+            opacity: 0.7;
+        }
+
+        #noteIcon:focus {
+            outline: none;
+        }
+
+
+        #noteIcon {
+            
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+   
+
+
+    <div id="container">
+        <h1>Study Time</h1>
+        <p id="timer">Time remaining: <span id="time"></span></p>
+        <button onclick="resetTimer()">Reset</button>
+        <img src="C:\Users\phloh\OneDrive\Desktop\BACKGROUND.gif" id="background-image">
+        <button id="playAudio" onclick="playAudio()">Play</button>
+        <div id="audioFileDisplay" class="audio-display">CBell.wav</div>
+        <div id="noteIcon" tabindex="0"></div>
+        <div id="stickyNote" contenteditable="true" class="hidden">
+            notepad...
+            <div id="stickyNoteResizeHandle"></div>
+            <div class="sticky-note-header"></div>
+        </div>
+    <script>
+        let intervalId;
+        let timeRemaining = 0;
+        let isRestTime = false;
+        let audio; // declare the audio object outside of the playAudio() function
+
+        function playAudio() {
+            audio = new Audio('./CBell.wav'); // Update the path to the audio file
+            audio.play();
+        }
+
+        function startTimer() {
+            timeRemaining = isRestTime ? 300 : 1500; // 1500 seconds = 25 minutes, 300 seconds = 5 minutes
+            intervalId = setInterval(updateTimer, 1000); // update timer every second
+            audio = new Audio('./CBell.wav'); // updated path to the audio file
+        }
+
+        function toggleStickyNote() {
+    const stickyNote = document.getElementById('stickyNote');
+    if (stickyNote.classList.contains('active')) {
+        stickyNote.classList.remove('active');
+    } else {
+        stickyNote.classList.add('active');
+        stickyNote.focus(); // focus the sticky note when it's shown
+    }
+}
+
+function saveNotes() {
+    const stickyNote = document.getElementById('stickyNote');
+    localStorage.setItem('stickyNoteContent', stickyNote.innerHTML);
+}
+
+        function updateTimer() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('time').textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            timeRemaining--;
+
+            if (timeRemaining < 0) {
+                clearInterval(intervalId);
+                isRestTime = !isRestTime;
+                audio.pause(); // add this line to stop the audio
+                startTimer();
+            }
+
+            if (timeRemaining < 0) {
+                clearInterval(intervalId);
+                isRestTime = !isRestTime;
+                startTimer();
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(intervalId);
+            isRestTime = false;
+            timeRemaining = 1500; // reset to 25 minutes
+            document.getElementById('time').textContent = '25:00';
+            document.getElementById('timer').classList.remove('blue');
+            startTimer();
+        }
+        function createStickyNote() {
+        const stickyNotesContainer = document.getElementById("stickyNotesContainer");
+        const newStickyNote = document.createElement("div");
+        newStickyNote.className = "sticky-note";
+        newStickyNote.contentEditable = "true";
+        stickyNotesContainer.appendChild(newStickyNote);
+
+        const containerRect = stickyNotesContainer.getBoundingClientRect();
+        const noteRect = newStickyNote.getBoundingClientRect();
+        newStickyNote.style.left = Math.random() * (containerRect.width - noteRect.width) + "px";
+        newStickyNote.style.top = Math.random() * (containerRect.height - noteRect.height) + "px";
+    }
+
+    startTimer();
+
+    let drag = false;
+let resize = false;
+let offsetX, offsetY;
+let noteCounter = 0;
+let activeNotepad
+
+function createNewNotepad() {
+  noteCounter++;
+  const newNotepad = document.createElement("div");
+  newNotepad.id = `stickyNote${noteCounter}`;
+  newNotepad.classList.add("sticky-note");
+  newNotepad.setAttribute("contenteditable", true);
+
+  const newNotepadHeader = document.createElement("div");
+  newNotepadHeader.classList.add("sticky-note-header", "sticky-note-handle");
+  newNotepad.appendChild(newNotepadHeader);
+
+  const closeButton = document.createElement("span");
+  closeButton.textContent = "X";
+  closeButton.classList.add("sticky-note-close");
+  newNotepadHeader.appendChild(closeButton);
+  closeButton.addEventListener("click", (e) => {
+  e.stopPropagation();
+  newNotepad.remove();
+});
+
+  const notepadContent = document.createElement("div");
+  notepadContent.classList.add("sticky-note-content");
+  notepadContent.innerHTML = "notepad...";
+  newNotepad.appendChild(notepadContent);
+
+  const container = document.getElementById("container");
+  container.appendChild(newNotepad);
+  newNotepad.style.left = "70px";
+  newNotepad.style.top = "50px";
+}
+function toggleStickyNote() {
+  const activeNotepad = document.querySelector(".sticky-note.active");
+  if (activeNotepad) {
+    activeNotepad.classList.remove("active");
+  } else {
+    createNewNotepad();
+  }
+}
+
+const noteIcon = document.getElementById("noteIcon");
+noteIcon.addEventListener("click", createNewNotepad);
+
+
+function startDrag(e) {
+    if (e.target.classList.contains("sticky-note-header")) {
+        activeNotepad = e.target.parentElement;
+        offsetX = e.clientX - activeNotepad.getBoundingClientRect().left;
+        offsetY = e.clientY - activeNotepad.getBoundingClientRect().top;
+        drag = true;
+    }
+}
+
+    function doDrag(e) {
+        if (drag && activeNotepad) {
+            const newX = e.clientX - offsetX;
+            const newY = e.clientY - offsetY;
+            activeNotepad.style.left = newX + "px";
+            activeNotepad.style.top = newY + "px";
+        }
+    }
+
+    function stopDrag() {
+        drag = false;
+        activeNotepad = null;
+    }
+
+
+    document.addEventListener("mousedown", startDrag, true);
+document.addEventListener("mousemove", doDrag);
+document.addEventListener("mouseup", stopDrag);
+const stickyNote = document.getElementById('stickyNote');
+stickyNote.style.left = '70px';
+stickyNote.style.top = '50px';
+stickyNote.style.width = '200px';
+stickyNote.style.height = '300px';
+
+stickyNote.addEventListener('mousedown', startDrag);
+document.addEventListener('mousemove', doDrag);
+document.addEventListener('mouseup', stopDrag);
+
+</script>
+</body>
+</html>
